@@ -17,8 +17,7 @@
     "react-dom": "17.0.2",
     "react-scripts": "4.0.0",
     "react-spring-bottom-sheet": "3.4.0",
-    "ress": "4.0.0",
-    "atom-keybindings": "git+https://github.com:microsoft/vscode-atom-keybindings.git#main"
+    "ress": "4.0.0"
   },
   "devDependencies": {
     "@types/react": "17.0.0",
