@@ -1,4 +1,5 @@
 export type BottomSheetProps = {
   open: boolean;
-  onDismiss: () => unknown;
+  onDismiss: () => void;
+  onReady: () => void;
 };

@@ -1,26 +1,28 @@
-import "./styles.css";
-
 import { useState } from "react";
-import { Button } from "./elements";
+import { Flex, Text, Button } from "@chakra-ui/react";
+
 import { ChakraProvider } from "./providers";
-import { Option, OptionSwitch } from "./option-switch";
+import { Viewport } from "./elements";
+import { Option, OptionSwitch } from "./components";
 
 export const App = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
+
   const [option, setOption] = useState<Option>(Option.ReactSpringBottomSheet);
 
-  const onToggle = () => setOpen(!open);
+  const onReady = () => setOpen(true);
+
   const onDismiss = () => setOpen(false);
 
   return (
     <ChakraProvider>
-      <div className="root">
-        <Button onClick={onToggle}>{open ? "Close" : "Open"}</Button>
-        <Button onClick={() => setOption(Option.ReactSpringBottomSheet)}>
-          Next
-        </Button>
-        <OptionSwitch option={option} open={open} onDismiss={onDismiss} />
-      </div>
+      <Viewport>
+        <Flex alignItems="center" justifyContent="center" gridGap={4}>
+          <Text fontSize="xxx-large">Bottom Sheet</Text>
+          <Button onClick={() => (open ? onDismiss : onReady)()}>{open ? "Close" : "Open"}</Button>
+          <OptionSwitch option={option} open={open} onReady={onReady} onDismiss={onDismiss} />
+        </Flex>
+      </Viewport>
     </ChakraProvider>
   );
 };
