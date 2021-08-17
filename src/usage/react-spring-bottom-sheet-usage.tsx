@@ -11,7 +11,7 @@ import { SheetContent } from "./sheet-content";
 export const ReactSpringBottomSheetUsage = React.forwardRef(
   ({ open, onReady, onDismiss, ...props }: BottomSheetProps, ref: RSBS.ForwardedRef) => {
     const theme = useTheme();
-    const backgroundColor = useColorModeValue(theme.colors.gray[400], theme.colors.gray[800]);
+    const backgroundColor = useColorModeValue(theme.colors.pink[100], theme.colors.gray[800]);
 
     // animate out on unmount
     useEffect(() => onDismiss, []);

@@ -18,7 +18,7 @@ export const App = () => {
     <ChakraProvider>
       <Viewport>
         <Flex alignItems="center" justifyContent="center" gridGap={4}>
-          <Text fontSize="xxx-large">Bottom Sheet</Text>
+          <Text fontSize="3rem">Bottom Sheet</Text>
           <Button onClick={() => (open ? onDismiss : onReady)()}>{open ? "Close" : "Open"}</Button>
           <OptionSwitch option={option} open={open} onReady={onReady} onDismiss={onDismiss} />
         </Flex>
