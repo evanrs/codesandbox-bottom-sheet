@@ -1,2 +1,1 @@
-# codesandbox-all-bottom-sheets
-Created with CodeSandbox
+# codesandbox-bottom-sheet
